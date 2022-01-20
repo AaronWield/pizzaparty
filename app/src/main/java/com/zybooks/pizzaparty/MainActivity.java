@@ -64,4 +64,7 @@ public class MainActivity extends AppCompatActivity {
         String totalText = getString(R.string.total_pizzas, totalPizzas);
         mNumPizzasTextView.setText(totalText);
     }
+    public void CalculatePrice(View view){
+
+    }
 }
