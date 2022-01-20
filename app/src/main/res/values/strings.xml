@@ -5,6 +5,7 @@
     <string name="light">Light</string>
     <string name="medium">Medium</string>
     <string name="ravenous">Ravenous</string>
-    <string name="total_pizzas">Total pizzas: ?</string>
     <string name="calculate">Calculate</string>
+    <string name="total_pizzas">Total pizzas: %d</string>
+    <string name="total_price">Total Price</string>
 </resources>
