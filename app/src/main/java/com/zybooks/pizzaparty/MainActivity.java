@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 
@@ -27,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate was called");
 
-
         // Assign the widgets to fields
         mNumAttendEditText = findViewById(R.id.num_attend_edit_text);
         mNumPizzasTextView = findViewById(R.id.num_pizzas_text_view);
@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calculateClick(View view) {
+
+        Toast.makeText(getApplicationContext(),"Pizza's Calculated",Toast.LENGTH_SHORT).show();
 
         // Get how many are attending the party
         int numAttend;
@@ -63,8 +65,9 @@ public class MainActivity extends AppCompatActivity {
         // Place totalPizzas into the string resource and display
         String totalText = getString(R.string.total_pizzas, totalPizzas);
         mNumPizzasTextView.setText(totalText);
-    }
-    public void CalculatePrice(View view){
-
+    };
+    public void Register(View view){
+        Toast.makeText(getApplicationContext(), "Thank you for registering an account!",
+                Toast.LENGTH_LONG).show();
     }
 }

@@ -9,7 +9,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/pizza_background"
     tools:context="com.zybooks.pizzaparty.MainActivity">
 
         <LinearLayout
@@ -21,15 +20,86 @@
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin"
-            android:background="@drawable/pizza_background"
             tools:context="com.zybooks.pizzaparty.MainActivity">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Aaron's Pizzeria"
-                android:textSize="48dp"
-                android:labelFor="@id/num_attend_edit_text" />
+            <FrameLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:src="@drawable/pizza_background"
+                    android:layout_gravity="center"
+                    android:layout_height="300dp"
+                    android:layout_width="300dp" />
+
+                <TextView
+                    android:text="Aaron's Pizzeria"
+                    android:textSize="46dp"
+                    android:textColor="@color/my_green"
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent"
+                    android:gravity="top" />
+            </FrameLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView
+                        android:layout_span="2"
+                        android:text="Register an Account:"
+                        android:textSize="26sp"
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="Register" />
+
+                    <EditText />
+                    />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="Username:" />
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="Password:" />
+                    <EditText android:inputType="textPassword" />
+                </TableRow>
+
+                <TableRow>
+                    <Button
+                        android:layout_column="1"
+                        android:text="Register" />
+                </TableRow>
+            </TableLayout>
+
+            <GridLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:useDefaultMargins="true"
+                android:columnCount="2">
+                <TextView
+                    android:textSize="26sp"
+                    android:layout_columnSpan="2"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Login to Account:" />
+                <TextView
+                    android:text="Username:" />
+                <EditText
+                    android:layout_gravity="fill_horizontal" />
+                <TextView
+                    android:text="Password:" />
+                <EditText
+                    android:layout_gravity="fill_horizontal"
+                    android:inputType="textPassword" />
+                <Button
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:text="Login" />
+            </GridLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -193,11 +263,42 @@
                     android:layout_height="wrap_content"
                     android:checked="true" />
             </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Address"
+                android:textSize="24sp"
+                android:labelFor="@id/address_edit_text" />
+
+            <EditText
+                android:id="@+id/address_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter Address"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
             <Button
                 android:id="@+id/price_button"
                 android:text="@string/total_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please rate our app below:" />
+
+            <RatingBar
+                android:id="@+id/ratingBar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
         </LinearLayout>
+
 </ScrollView>
